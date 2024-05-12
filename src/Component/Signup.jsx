@@ -26,34 +26,41 @@ function Signup() {
     }
   };
 
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    const formData = new FormData();
-    formData.append("email", credentials.email);
-    formData.append("password", credentials.password);
-    formData.append("name", credentials.name);
-    formData.append("image", credentials.image);
-    
-    const response = await fetch(`${universalurl}api/createuser`, {
-      method: "POST",
-      body: formData,
-    });
-
-    const json = await response.json();
-
-    if (!json.success) {
-      alert("Signup failed. Please check your details and try again.");
-    } else {
-      alert("Signup successful!");
-      Swal.fire({
-        title: "SignUp Succesfully!",
+    try {
+      const formData = new FormData();
+      formData.append("email", credentials.email);
+      formData.append("password", credentials.password);
+      formData.append("name", credentials.name);
+      formData.append("image", credentials.image);
       
-        icon: "success",
+      const response = await fetch(`${universalurl}api/createuser`, {
+        method: "POST",
+        body: formData,
+      });
+  
+      const json = await response.json();
+  
+      if (!json.success) {
+        throw new Error("Signup failed. Please check your details and try again.");
+      } else {
+        Swal.fire({
+          title: "SignUp Successfully!",
+          icon: "success",
+        });
+      }
+    } catch (error) {
+      Swal.fire({
+        title: error.message,
+        icon: "error",
       });
     }
   };
-
+  
   return (
     <div className="singCont">
       <h3>Welcome to Activity tracker</h3>
