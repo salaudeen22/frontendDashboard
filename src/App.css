@@ -1,0 +1,596 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.AuthContent {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+}
+.AuthContent .left {
+  flex: 1;
+  background-image: url("https://cdn.papershift.com/20220523200629/employee-time-tracking-the-way-you-want-it-to-work-by-Papershift-min-scaled-910x500.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.AuthContent .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.AuthContent span {
+  font-size: 15px;
+  cursor: pointer;
+}
+.singCont {
+  text-align: center;
+}
+.singCont form {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.singCont {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.singCont h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.singCont p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.singCont form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.singCont form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.singCont form button:hover {
+  background-color: #0056b3;
+}
+
+body {
+  background-color: #acbada;
+}
+
+.sidebar {
+  width: 4.5rem;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+
+  align-items: center;
+  transition: width 0.5s ease;
+
+  flex-direction: column;
+}
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#icon {
+  margin: 2vw;
+  font-size: 2rem;
+  color: #eee8f6;
+}
+.sidebar ul li a {
+  color: inherit;
+}
+.sidebar ul li {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  list-style: none;
+  color: #7091e6;
+
+  margin-top: 1vw;
+  font-size: 1.2rem;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+.sidebar ul li:hover {
+  background-color: #eee8f6;
+}
+
+/* nav  */
+
+nav {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgba(118, 81, 128, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+nav h1 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+nav h1 span {
+  font-weight: 500;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+}
+nav ul li {
+  margin-left: 20px;
+  list-style: none;
+}
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+#tooglebutton {
+  display: none;
+}
+.dropbtn {
+  position: relative;
+  background-color: #3498db;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown-content {
+  background-color: #fff;
+  width: 20vw;
+  text-align: center;
+  top: 70px;
+  right: 30px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+.dropdown-content a {
+  padding: 10px 20px;
+}
+
+.Container {
+  border: 1px solid black;
+  background-color: aliceblue;
+  height: 95vh;
+  width: calc(100vw - 4.5rem);
+  margin: 10px;
+  position: fixed;
+  border: none;
+  outline: none;
+
+  border-radius: 20px;
+  margin-left: 4.5rem;
+}
+.section-1 {
+  padding: 20px;
+}
+.headerSection {
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.TotalBox {
+  font-family: Arial, sans-serif;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  width: 20vw;
+  margin: 0 auto;
+  box-shadow: "1px 6px 20px 0px rgba(0, 0, 0, 0.15)";
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.cotent {
+  text-align: center;
+}
+.cotent h1 {
+  font-size: 2vw;
+}
+
+.cotent span {
+  font-size: 1vw;
+  color: #666;
+  margin-left: 5px;
+}
+.graphContainer {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.graphCard {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.graphContent {
+  display: flex;
+  justify-content: center;
+}
+
+.noData {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+  margin: 20px 0;
+}
+.section-2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.header {
+  /* background-color: red; */
+  height: 30%;
+}
+.middlesection {
+  /* background-color: brown; */
+  height: 30%;
+}
+.bottomsection {
+  /* background-color: blue; */
+  display: flex;
+  gap: 20px;
+  padding: 0 10px;
+  height: 60%;
+}
+.VisitBox {
+  flex: 70%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+}
+.visitTitle {
+  text-align: center;
+  margin-bottom: 10px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  font-weight: 700;
+  color: #0056b3;
+}
+td,
+th {
+  text-align: left;
+  padding: 5px;
+}
+
+tr:hover {
+  font-size: 1rem;
+  color: #ccc;
+  cursor: pointer;
+}
+.viewallurl {
+  margin-top: 4px;
+  text-align: center;
+  display: flex;
+  text-decoration: none;
+  color: #007bff;
+  justify-content: center;
+  align-items: center;
+}
+.middlesection {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+.Encourgamentbox {
+  flex: 30%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+}
+.EncouragementBox {
+  text-align: center;
+  margin: 0%;
+  padding: 0px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.encouragement-productivity {
+  background-color: #b3ffb3; /* Light green */
+}
+
+.encouragement-distraction {
+  background-color: #ffcccc; /* Light red */
+}
+
+.encouragement-balance {
+  background-color: #ffffcc; /* Light yellow */
+}
+
+.encouragement-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.EncouragementBox h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.EncouragementBox p {
+  padding: 2px;
+  font-size: 17px;
+}
+
+/* weekreport component */
+.weekreportbox {
+  width: 50%;
+  height: 80%;
+  padding: 10px;
+  text-align: center;
+  margin: 0%;
+  padding: 0px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+/* BlockResist */
+.ResistedBox {
+  width: 50%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+.rtitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.rtitle button {
+  padding: 8px 20px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.rtitle button:hover {
+  background-color: #007bff;
+  color: white;
+  border: 1px solid wheat;
+}
+/* BlockResist */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  width: 40vw;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.form-input {
+  margin-bottom: 10px;
+}
+
+.form-input input,
+.form-input select,
+.form-input button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+
+.form-input button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.form-input button:hover {
+  background-color: #0056b3;
+}
+
+.s3header {
+  display: flex;
+  margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+  .AuthContent {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+  }
+  main {
+    position: relative;
+  }
+  .sidebar {
+    margin-top: 10vh;
+    width: 0;
+    background-color: #007bff;
+    position: absolute;
+    overflow: hidden;
+    z-index: 99;
+  }
+  .sidebar.hidden {
+    width: 3.5rem;
+  }
+  nav h1 {
+    font-size: 1rem;
+    font-weight: 300;
+}
+  .AuthContent .left {
+    display: none;
+    flex: 1 1;
+    background-image: url(https://cdn.papershift.com/20220523200629/employee-time-tracking-the-way-you-want-it-to-work-by-Papershift-min-scaled-910x500.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .bell
+{
+  display: none;
+}
+.content h1
+{
+  font-size: 2vw;
+}
+  .Container {
+    width: 100%;
+    position: inherit;
+    margin-left: 0rem;
+    height: 100%;
+  }
+  #tooglebutton {
+    display: block;
+  }
+  .TotalBox {
+    font-family: Arial, sans-serif;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 48vw;
+    margin: 0 auto;
+    box-shadow: "1px 6px 20px 0px rgba(0, 0, 0, 0.15)";
+  }
+  .middlesection {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    padding: 10px;
+  }
+  .bottomsection {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+    height: 100vh;
+  }
+  .weekreportbox {
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    margin: 0%;
+    padding: 0px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  }
+  .ResistedBox {
+    width: 100%;
+    height: 50%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+}
+
+
+@media (max-width: 350px )
+{
+  .css-10o2lyd-MuiStack-root {
+    display: none;
+}
+#tooglebutton {
+  display: block;
+  padding: 5px 10px;
+}
+.headerSection {
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
+  align-items: center;
+}
+.content h1 {
+  font-size: 7vw;
+}
+
+.cotent h1 {
+  font-size: 7vw;
+}
+}
