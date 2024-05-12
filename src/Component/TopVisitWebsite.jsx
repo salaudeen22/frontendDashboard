@@ -98,7 +98,7 @@ function TopVisitWebsite({ data, webdata }) {
             })}
           </tbody>
         </table>
-        <a href="#" className="viewallurl">
+        <a href="/" className="viewallurl">
           View All website Visited <FontAwesomeIcon icon={faArrowRight} />
         </a>
       </div>
