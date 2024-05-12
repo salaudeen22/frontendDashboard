@@ -455,6 +455,13 @@ tr:hover {
   border-radius: 5px;
   box-sizing: border-box;
 }
+.errorMessage
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vw;
+}
 
 
 
