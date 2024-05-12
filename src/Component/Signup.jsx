@@ -93,7 +93,7 @@ function Signup() {
           id="image"
           onChange={handleChange}
           accept="image/*"
-          required
+         
         />
         <button type="submit">Sign Up</button>
       </form>
