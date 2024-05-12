@@ -130,7 +130,7 @@ function WebsiteAnalytics() {
               </li>
             </ul>
           </nav>
-          {data.length == 0 ? (
+          {data.length === 0 ? (
             <div>Loading please wait...</div>
           ) : (
             <div className="section-3">
