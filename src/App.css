@@ -628,4 +628,11 @@ tr:hover {
 .cotent h1 {
   font-size: 7vw;
 }
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #0003;
+  padding: 20px;
+  width: 75vw;
+}
 }
