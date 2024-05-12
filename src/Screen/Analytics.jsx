@@ -94,11 +94,13 @@ function Analytics() {
             <h1>
               Good Day, <span>{user}</span>
             </h1>
+            <div className="time">
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DemoContainer components={["DatePicker"]}>
                 <DatePicker label="Adjust the Date" />
               </DemoContainer>
             </LocalizationProvider>
+            </div>
             <ul>
               <li className="bell">
                 <FontAwesomeIcon icon={faBell} />
