@@ -57,6 +57,7 @@ function Signup() {
       Swal.fire({
         title: error.message,
         icon: "error",
+        text: "try login without image!",
       });
     }
   };
